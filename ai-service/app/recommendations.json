@@ -1,0 +1,16 @@
+{
+  "High Risk": {
+    "Diabetes": ["Adopt a low-carb diet", "Consult an endocrinologist", "Monitor blood glucose daily"],
+    "Heart Disease": ["Avoid trans fats", "Consult a cardiologist", "Engage in supervised cardiovascular exercise"],
+    "CKD": ["Limit sodium and protein intake", "Consult a nephrologist", "Monitor blood pressure rigorously"],
+    "Stroke": ["Strict blood pressure control", "Consult a neurologist", "Take prescribed anticoagulants"],
+    "Liver Disease": ["Complete alcohol abstinence", "Consult a hepatologist", "Adopt a low-fat diet"],
+    "Hypertension": ["Reduce sodium intake", "Engage in aerobic exercises", "Take prescribed antihypertensives"]
+  },
+  "Moderate Risk": {
+    "General": ["Schedule a follow-up test within 3 months", "Maintain a balanced diet", "Exercise 150 minutes a week"]
+  },
+  "Low Risk": {
+    "General": ["Continue current healthy habits", "Schedule annual checkups"]
+  }
+}

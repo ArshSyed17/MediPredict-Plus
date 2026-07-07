@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+scikit-learn
+xgboost
+pandas
+numpy
+joblib
+shap
+matplotlib
+seaborn
+python-dotenv
+pydantic-settings
+

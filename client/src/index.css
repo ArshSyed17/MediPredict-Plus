@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  background: radial-gradient(circle at top, #1e293b 0%, #020617 45%, #020617 100%);
+  color: #e2e8f0;
+}
+
+html.light body {
+  background: radial-gradient(circle at top, #f1f5f9 0%, #e2e8f0 45%, #f8fafc 100%);
+  color: #0f172a;
+}
+
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .report-viewer section {
+    break-inside: avoid;
+    border-color: #e2e8f0;
+    background: white;
+    color: black;
+  }
+}

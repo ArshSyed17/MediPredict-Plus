@@ -1,0 +1,111 @@
+openapi: 3.0.0
+info:
+  title: MediPredict+ API
+  description: Enterprise Healthcare AI & Analytics Platform API documentation.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/api/v1
+    description: Local Node.js API Server
+  - url: http://localhost:8000/api/v1
+    description: Local FastAPI AI Engine
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  /auth/register:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                role:
+                  type: string
+                  enum: [Patient, Doctor, Admin]
+      responses:
+        '201':
+          description: User created
+  /auth/login:
+    post:
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful (returns JWT token)
+  /predictions:
+    post:
+      summary: Generate a new prediction via AI Engine
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                disease:
+                  type: string
+                  example: diabetes
+                features:
+                  type: object
+                  additionalProperties:
+                    type: number
+      responses:
+        '201':
+          description: Prediction generated and saved
+  /predictions/{patientId}:
+    get:
+      summary: Get prediction history for a patient
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: patientId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of predictions
+  /predict/{disease}:
+    post:
+      summary: Direct FastAPI Inference (Internal)
+      description: Endpoint exposed by the AI service (Port 8000). Not for direct frontend usage.
+      parameters:
+        - in: path
+          name: disease
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Inference result with SHAP logic

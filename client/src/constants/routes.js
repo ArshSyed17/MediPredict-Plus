@@ -1,0 +1,45 @@
+export const ROUTES = {
+  LANDING: '/',
+  LOGIN: '/login',
+  REGISTER: '/register',
+  FORGOT_PASSWORD: '/forgot-password',
+  DASHBOARD: '/dashboard',
+  PREDICTION: '/prediction',
+  SIMULATOR: '/simulator',
+  REPORTS: '/reports',
+  PROFILE: '/profile',
+  SETTINGS: '/settings',
+  ASK_AI: '/ask-ai',
+  DOCTOR_DASHBOARD: '/doctor',
+  ADMIN_DASHBOARD: '/admin',
+  NOT_FOUND: '/404',
+  UNAUTHORIZED: '/403',
+  SERVER_ERROR: '/500',
+  NETWORK_ERROR: '/network-error',
+  OFFLINE: '/offline',
+};
+
+export const PUBLIC_ROUTES = [
+  ROUTES.LANDING,
+  ROUTES.LOGIN,
+  ROUTES.REGISTER,
+  ROUTES.FORGOT_PASSWORD,
+  ROUTES.NOT_FOUND,
+  ROUTES.UNAUTHORIZED,
+  ROUTES.SERVER_ERROR,
+  ROUTES.NETWORK_ERROR,
+  ROUTES.OFFLINE,
+];
+
+export const PROTECTED_ROUTES = [
+  ROUTES.DASHBOARD,
+  ROUTES.PREDICTION,
+  ROUTES.SIMULATOR,
+  ROUTES.REPORTS,
+  ROUTES.PROFILE,
+  ROUTES.SETTINGS,
+  ROUTES.ASK_AI,
+];
+
+export const DOCTOR_ROUTES = [ROUTES.DOCTOR_DASHBOARD];
+export const ADMIN_ROUTES = [ROUTES.ADMIN_DASHBOARD];
