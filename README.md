@@ -120,7 +120,3 @@ npm run dev
 - [ ] Direct Doctor-Patient chat interface via Socket.IO.
 - [ ] Integration with wearable APIs (Apple Health, Fitbit).
 - [ ] Expanded AI Engine supporting image classification (X-Ray/MRI).
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

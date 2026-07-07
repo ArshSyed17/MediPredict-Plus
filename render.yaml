@@ -1,0 +1,27 @@
+services:
+  # Node.js Express Backend
+  - type: web
+    name: medipredict-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false # You must set this in the Render dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AI_SERVICE_URL
+        # This references the AI engine below
+        value: http://medipredict-ai-engine:8000
+
+  # Python FastAPI AI Engine
+  - type: web
+    name: medipredict-ai-engine
+    env: python
+    buildCommand: cd ai-service && pip install -r requirements.txt && python training/scripts/train_all.py
+    startCommand: cd ai-service && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
