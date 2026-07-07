@@ -1,6 +1,6 @@
 # MediPredict+ 🏥✨
 
-![MediPredict+ Cover](https://via.placeholder.com/1200x400.png?text=MediPredict%2B+-+Enterprise+Healthcare+AI)
+> An Enterprise Healthcare AI Platform for Predictive Analytics and Clinical Management
 
 MediPredict+ is a comprehensive, AI-powered healthcare analytics platform built for the modern medical enterprise. It seamlessly bridges the gap between patient diagnostics, health metrics forecasting, and professional clinical management using state-of-the-art Machine Learning models.
 
@@ -15,6 +15,34 @@ MediPredict+ is a comprehensive, AI-powered healthcare analytics platform built 
   - **Admin Dashboard**: System-wide analytics, user management, and broadcast notifications.
 - **Real-Time Communication**: WebSockets (`Socket.IO`) integration for instantaneous event broadcasting.
 - **Secure Architecture**: JWT-based authentication, bcrypt hashing, and strict role validation.
+
+## 📸 Screenshots
+
+Here is a glimpse of the MediPredict+ platform in action:
+
+<div align="center">
+  <img src="screenshots/Screenshot%202026-07-07%20104619.png" width="45%" alt="Platform Interface 1" />
+  <img src="screenshots/Screenshot%202026-07-07%20104718.png" width="45%" alt="Platform Interface 2" />
+</div>
+<br>
+<div align="center">
+  <img src="screenshots/Screenshot%202026-07-07%20104735.png" width="45%" alt="Platform Interface 3" />
+  <img src="screenshots/Screenshot%202026-07-07%20104753.png" width="45%" alt="Platform Interface 4" />
+</div>
+<br>
+<div align="center">
+  <img src="screenshots/Screenshot%202026-07-07%20104822.png" width="45%" alt="Platform Interface 5" />
+  <img src="screenshots/Screenshot%202026-07-07%20104839.png" width="45%" alt="Platform Interface 6" />
+</div>
+<br>
+<div align="center">
+  <img src="screenshots/Screenshot%202026-07-07%20104856.png" width="45%" alt="Platform Interface 7" />
+  <img src="screenshots/Screenshot%202026-07-07%20104918.png" width="45%" alt="Platform Interface 8" />
+</div>
+<br>
+<div align="center">
+  <img src="screenshots/Screenshot%202026-07-07%20104933.png" width="45%" alt="Platform Interface 9" />
+</div>
 
 ## 🛠 Technology Stack
 
@@ -52,8 +80,8 @@ The platform operates on a strictly decoupled **Microservices Architecture**:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/medipredict-plus.git
-cd medipredict-plus
+git clone https://github.com/ArshSyed17/MediPredict-Plus.git
+cd MediPredict-Plus
 ```
 
 ### 2. Setup the Express Backend
@@ -68,7 +96,7 @@ npm run dev
 ```bash
 cd ai-service
 python -m venv venv
-source venv/bin/activate # Or venv\Scripts\activate on Windows
+# Windows: venv\Scripts\activate | Mac/Linux: source venv/bin/activate
 pip install -r requirements.txt
 python training/scripts/train_all.py # Train initial models
 uvicorn app.main:app --reload
@@ -81,15 +109,6 @@ npm install
 cp .env.example .env
 npm run dev
 ```
-
-## 📸 Screenshots
-
-*Note: Replace placeholders with actual application screenshots before portfolio presentation.*
-
-1. **Patient Dashboard**: `[Placeholder: dashboard.png]`
-2. **AI Prediction Flow**: `[Placeholder: prediction.png]`
-3. **Doctor Management**: `[Placeholder: doctor_portal.png]`
-4. **SHAP Explanations**: `[Placeholder: shap_explain.png]`
 
 ## 🌍 Deployment
 
